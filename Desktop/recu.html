@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Reçu du rendez-vous</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h2 style="color: #E91E63;">Reçu du rendez-vous</h2>
+    <p><strong>Nom :</strong> <span id="name"></span></p>
+    <p><strong>Date :</strong> <span id="date"></span></p>
+    <p><strong>Heure :</strong> <span id="time"></span></p>
+    <p><strong>Service :</strong> <span id="service"></span></p>
+    <p><strong>Coiffeur :</strong> <span id="hairdresser"></span></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("name").textContent = params.get("name");
+        document.getElementById("date").textContent = params.get("date");
+        document.getElementById("time").textContent = params.get("time");
+        document.getElementById("service").textContent = params.get("service");
+        document.getElementById("hairdresser").textContent = params.get("hairdresser");
+    </script>
+</body>
+</html>
